@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
+    <?!= HtmlService.createHtmlOutputFromFile('css').getContent(); ?>    
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>感情分析AIの体験版</h1>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">感情分析したい文章を記入してください</label>
+        <textarea class="form-control sentence" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="button-margin">
+        <input type="button" class="upload-btn btn btn-success btn-lg js-on-click" value="感情分析">
+        <p class="message">感情分析ボタンを押してください</p>
+      </div>
+      <div class="container">
+        <div class="js-add-table">
+        </div>        
+      </div>
+    </div>
+    <?!= HtmlService.createHtmlOutputFromFile('js').getContent(); ?>
+  </body>
+</html>
